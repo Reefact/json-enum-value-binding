@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>Reefact.JsonEnumValueBinding</id>
+    <title>Enum Value Binding for JSON</title>
+    <version>5.0.0</version>
+    <authors>Sylvain AURAT</authors>
+    <owners>Sylvain AURAT</owners>
+    <license type="expression">Apache-2.0</license>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectUrl>https://github.com/Reefact/json-enum-value-binding</projectUrl>
+    <repository type="git" url="https://github.com/Reefact/json-enum-value-binding.git"/>
+    <icon>images\icon.png</icon>
+    <description>Allows explicit naming of enumeration values. Is to enumeration values what `JsonPropertyNameAttribute` is to properties names.</description>
+    <summary>Strengthen the stability of your API contracts and take full control over the JSON serialization of your enums. Designed for developers who demand uncompromising contract security, this library simplifies the customization of enumeration JSON values, guaranteeing long-term compatibility with your customers.</summary>
+    <readme>docs\readme.md</readme>
+    <releaseNotes></releaseNotes>
+    <copyright>©2023 Reefact</copyright>
+    <language>en-US</language>
+    <tags>JSON Serialization Binding Enum Enumeration ASP.Net Contract</tags>
+    <dependencies>
+      <group targetFramework=".NET5.0" ></group>
+    </dependencies>
+  </metadata>
+  <files>
+    <!-- Images -->
+    <file src="icon.png" target="images\" />
+    <!-- Library -->
+    <!-- .NET5.0  -->
+    <file src="Reefact.JsonEnumNaming.Net50\bin\Debug\Reefact.JsonEnumNaming.dll" target="lib\net50\Reefact.JsonEnumNaming.dll" />
+    <file src="Reefact.JsonEnumNaming.Net50\bin\Debug\Reefact.JsonEnumNaming.xml" target="lib\net50\Reefact.JsonEnumNaming.xml" />
+    <file src="Reefact.JsonEnumNaming.Net50\bin\Debug\Reefact.JsonEnumNaming.pdb" target="lib\net50\Reefact.JsonEnumNaming.pdb" />
+    <!-- Documentation -->
+    <file src="README-EN.md" target="docs\readme.md" />
+  </files>
+</package>
