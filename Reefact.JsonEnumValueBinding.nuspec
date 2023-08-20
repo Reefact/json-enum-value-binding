@@ -3,7 +3,7 @@
   <metadata>
     <id>Reefact.JsonEnumValueBinding</id>
     <title>Enum Value Binding for JSON</title>
-    <version>5.0.0</version>
+    <version>6.0.0</version>
     <authors>Sylvain AURAT</authors>
     <owners>Sylvain AURAT</owners>
     <license type="expression">Apache-2.0</license>
@@ -27,9 +27,9 @@
     <file src="icon.png" target="images\" />
     <!-- Library -->
     <!-- .NET5.0  -->
-    <file src="Reefact.JsonEnumValueBinding\bin\Debug\net5.0\Reefact.JsonEnumValueBinding.dll" target="lib\net50\Reefact.JsonEnumValueBinding.dll" />
-    <file src="Reefact.JsonEnumValueBinding\bin\Debug\net5.0\Reefact.JsonEnumValueBinding.xml" target="lib\net50\Reefact.JsonEnumValueBinding.xml" />
-    <file src="Reefact.JsonEnumValueBinding\bin\Debug\net5.0\Reefact.JsonEnumValueBinding.pdb" target="lib\net50\Reefact.JsonEnumValueBinding.pdb" />
+    <file src="Reefact.JsonEnumValueBinding\bin\Debug\net6.0\Reefact.JsonEnumValueBinding.dll" target="lib\net6.0\Reefact.JsonEnumValueBinding.dll" />
+    <file src="Reefact.JsonEnumValueBinding\bin\Debug\net6.0\Reefact.JsonEnumValueBinding.xml" target="lib\net6.0\Reefact.JsonEnumValueBinding.xml" />
+    <file src="Reefact.JsonEnumValueBinding\bin\Debug\net6.0\Reefact.JsonEnumValueBinding.pdb" target="lib\net6.0\Reefact.JsonEnumValueBinding.pdb" />
     <!-- Documentation -->
     <file src="README-EN.md" target="docs\readme.md" />
   </files>
