@@ -22,7 +22,13 @@ Reinforce the stability of your API contracts and take full control over the JSO
 
 How to get started :
 
-- Install the NuGet "Reefact.JsonEnumValueBinding" package for your project.
+- Install the NuGet "Reefact.JsonEnumValueBinding" package for your project
+
+```console
+dotnet add package Reefact.JsonEnumValueBinding
+```
+
+
 - Activate the functionality in the `Startup.cs` file
 
 ```csharp

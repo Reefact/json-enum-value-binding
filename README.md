@@ -4,7 +4,7 @@
 
 **Librairie de personnalisation des valeurs d'énumération pour la sérialisation / désérialisation au format JSON et binding ASP.Net**
 
-Tout comme l'attribut `JsonPropertyNameAttribute` permet une personnalisation des noms de propriétés, `JsonEnumValueAttribute` accomplit la même tâche pour les valeurs énumérations.
+Tout comme l'attribut `JsonPropertyNameAttribute` permet une personnalisation des noms de propriétés, `JsonEnumValueAttribute` accomplit la même tâche pour les valeurs d'énumérations.
 
 Renforcez la stabilité de vos contrats d'API et prenez le contrôle total sur la sérialisation JSON de vos énumérations grâce à la librairie `Reefact.JsonEnumValueBinding`. Conçu pour les développeurs qui exigent une sécurité contractuelle sans compromis, cette librairie simplifie la personnalisation des valeurs d'énumération, garantissant ainsi une compatibilité à long terme avec vos clients.
 
@@ -22,7 +22,12 @@ Renforcez la stabilité de vos contrats d'API et prenez le contrôle total sur l
 
 Comment Commencer :
 
-- Installez le package NuGet "Reefact.JsonEnumValueBinding" pour votre projet.
+- Installez le package NuGet "Reefact.JsonEnumValueBinding" pour votre projet
+
+```console
+dotnet add package Reefact.JsonEnumValueBinding
+```
+
 - Activez la fonctionnalité dans le fichier `Startup.cs`
 
 ```csharp
