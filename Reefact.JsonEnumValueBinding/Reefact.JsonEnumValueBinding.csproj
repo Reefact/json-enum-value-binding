@@ -4,6 +4,7 @@
     <TargetFramework>net5.0</TargetFramework>
     <nullable>enable</nullable>
     <ApplicationIcon>icon.ico</ApplicationIcon>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>

@@ -27,9 +27,9 @@
     <file src="icon.png" target="images\" />
     <!-- Library -->
     <!-- .NET5.0  -->
-    <file src="Reefact.JsonEnumNaming.Net50\bin\Debug\Reefact.JsonEnumNaming.dll" target="lib\net50\Reefact.JsonEnumNaming.dll" />
-    <file src="Reefact.JsonEnumNaming.Net50\bin\Debug\Reefact.JsonEnumNaming.xml" target="lib\net50\Reefact.JsonEnumNaming.xml" />
-    <file src="Reefact.JsonEnumNaming.Net50\bin\Debug\Reefact.JsonEnumNaming.pdb" target="lib\net50\Reefact.JsonEnumNaming.pdb" />
+    <file src="Reefact.JsonEnumValueBinding\bin\Debug\net5.0\Reefact.JsonEnumValueBinding.dll" target="lib\net50\Reefact.JsonEnumValueBinding.dll" />
+    <file src="Reefact.JsonEnumValueBinding\bin\Debug\net5.0\Reefact.JsonEnumValueBinding.xml" target="lib\net50\Reefact.JsonEnumValueBinding.xml" />
+    <file src="Reefact.JsonEnumValueBinding\bin\Debug\net5.0\Reefact.JsonEnumValueBinding.pdb" target="lib\net50\Reefact.JsonEnumValueBinding.pdb" />
     <!-- Documentation -->
     <file src="README-EN.md" target="docs\readme.md" />
   </files>
