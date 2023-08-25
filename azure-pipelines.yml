@@ -25,10 +25,10 @@ steps:
     targetType: 'inline'
     script: |
               # Récupérer la valeur actuelle de la variable partagée
-              currentVersion=$(LatestPackageVersions.7_x_x)
+              currentVersion=$(7_x_x)
       
               # Lire la version à partir du fichier nuspec
-              nuspecVersion=$(grep -oP '(?<=<version>)[^<]+' **/*.nuspec)
+              nuspecVersion=$(grep -oP '(?<=<version>)[^<]+' Reefact.JsonEnumValueBinding.nuspec)
       
               echo "Current shared version: $currentVersion"
               echo "Version from nuspec: $nuspecVersion"
