@@ -39,7 +39,7 @@ steps:
               echo "Latest version was $latestVersion"
               echo "Version from nuspec is $nuspecVersion"
       
-              if [ "$currentVersion" == "$nuspecVersion" ]; then
+              if [ "$latestVersion" == "$nuspecVersion" ]; then
                 echo "Error: Version needs to be updated!"
                 exit 1
               else
