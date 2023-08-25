@@ -24,21 +24,26 @@ steps:
   inputs:
     targetType: 'inline'
     script: |
-              # Récupérer la valeur actuelle de la variable partagée
-              currentVersion=$(7_x_x)
-      
-              # Lire la version à partir du fichier nuspec
+              latestVersion=$(7_x_x)
+              if [[ ! "$latestVersion" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
+                echo "Latest version is invalid: $latestVersion"
+                exit 1
+              fi
+              
               nuspecVersion=$(sed -n 's/.*<version>\(.*\)<\/version>.*/\1/p' Reefact.JsonEnumValueBinding.nuspec)
-      
-              echo "Current shared version: $currentVersion"
-              echo "Version from nuspec: $nuspecVersion"
+              if [[ ! "$nuspecVersion" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
+                echo "Latest version is invalid: $latestVersion"
+                exit 1
+              fi
+
+              echo "Latest version was $latestVersion"
+              echo "Version from nuspec is $nuspecVersion"
       
               if [ "$currentVersion" == "$nuspecVersion" ]; then
                 echo "Error: Version needs to be updated!"
                 exit 1
               else
                 echo "Versions are different. Updating shared variable..."
-                exit 1
                 echo "##vso[task.setvariable variable=LatestPackageVersions.7_x_x;isOutput=true]$nuspecVersion"
               fi
 
