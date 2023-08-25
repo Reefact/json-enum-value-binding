@@ -28,7 +28,7 @@ steps:
               currentVersion=$(7_x_x)
       
               # Lire la version à partir du fichier nuspec
-              nuspecVersion=$(grep -oP '(?<=<version>)[^<]+' Reefact.JsonEnumValueBinding.nuspec)
+              nuspecVersion=$(sed -n 's/.*<version>\(.*\)<\/version>.*/\1/p' Reefact.JsonEnumValueBinding.nuspec)
       
               echo "Current shared version: $currentVersion"
               echo "Version from nuspec: $nuspecVersion"
