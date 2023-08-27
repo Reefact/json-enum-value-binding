@@ -27,9 +27,9 @@
     <file src="icon.png" target="images\" />
     <!-- Library -->
     <!-- .NET7.0  -->
-    <file src="Reefact.JsonEnumValueBinding\bin\Debug\net7.0\Reefact.JsonEnumValueBinding.dll" target="lib\net7.0\Reefact.JsonEnumValueBinding.dll" />
-    <file src="Reefact.JsonEnumValueBinding\bin\Debug\net7.0\Reefact.JsonEnumValueBinding.xml" target="lib\net7.0\Reefact.JsonEnumValueBinding.xml" />
-    <file src="Reefact.JsonEnumValueBinding\bin\Debug\net7.0\Reefact.JsonEnumValueBinding.pdb" target="lib\net7.0\Reefact.JsonEnumValueBinding.pdb" />
+    <file src="Reefact.JsonEnumValueBinding\bin\Release\net7.0\Reefact.JsonEnumValueBinding.dll" target="lib\net7.0\Reefact.JsonEnumValueBinding.dll" />
+    <file src="Reefact.JsonEnumValueBinding\bin\Release\net7.0\Reefact.JsonEnumValueBinding.xml" target="lib\net7.0\Reefact.JsonEnumValueBinding.xml" />
+    <file src="Reefact.JsonEnumValueBinding\bin\Release\net7.0\Reefact.JsonEnumValueBinding.pdb" target="lib\net7.0\Reefact.JsonEnumValueBinding.pdb" />
     <!-- Documentation -->
     <file src="README-EN.md" target="docs\readme.md" />
   </files>
