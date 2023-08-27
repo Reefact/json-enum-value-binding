@@ -34,7 +34,9 @@ steps:
 
               if [ -z "$result" ]; then
                   echo "New nuspec version is valid."
-                  echo "##vso[task.setvariable variable=7_x_x]$nuspecVersion"
+                  //echo "##vso[task.setvariable variable=7_x_x]$nuspecVersion"
+                  az pipelines variable-group variable update --group-id "LatestPackageVersions" --name "7_x_x" --value $nuspecVersion --organization https://dev.azure.com/Reefact --project 
+JsonEnumValueBinding
               else
                   echo $result;
                   exit 1
