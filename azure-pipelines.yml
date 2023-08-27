@@ -25,59 +25,19 @@ steps:
     targetType: 'inline'
     script: |
               latestVersion=$(7_x_x)
-              if [[ ! "$latestVersion" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
-                echo "Latest version is invalid: $latestVersion"
-                exit 1
-              fi
-              
               nuspecVersion=$(sed -n 's/.*<version>\(.*\)<\/version>.*/\1/p' Reefact.JsonEnumValueBinding.nuspec)
-              if [[ ! "$nuspecVersion" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
-                echo "Latest version is invalid: $latestVersion"
-                exit 1
-              fi
+             
+              echo "Latest version = $latestVersion"
+              echo "Nuspec version = $nuspecVersion"
 
-              echo "Latest version was $latestVersion"
-              echo "Version from nuspec is $nuspecVersion"
+              result=$(pwsh -File "path/to/Check-Version.ps1" -latestVersion "$latestVersion" -nuspecVersion "$nuspecVersion")
 
-              function Compare-SemanticVersions {
-                param (
-                    [string]$latestVersion,
-                    [string]$newVersion
-                )
-
-                $latestVersionArray = $latestVersion -split '\.'
-                $newVersionArray = $newVersion -split '\.'
-
-                $length = [Math]::Max($latestVersionArray.Length, $newVersionArray.Length)
-
-                for ($i = 0; $i -lt $length; $i++) {
-                    $part1 = if ($i -lt $latestVersionArray.Length) { [int]$latestVersionArray[$i] } else { 0 }
-                    $part2 = if ($i -lt $newVersionArray.Length) { [int]$newVersionArray[$i] } else { 0 }
-
-                    if ($part1 -lt $part2) {
-                        return -1
-                    }
-                    elseif ($part1 -gt $part2) {
-                        return 1
-                    }
-                }
-                return 0
-              }
-
-              $result = Compare-SemanticVersions -latestVersion $latestVersion -newVersion $newVersion
-              if ($result -le 0) {
-                echo "ERROR: new version (nuspec version) should be greater than latest version."
-                echo "You must update the version number in the nuspec file to continue."
-                exit 1
-              }
-      
-              if [ "$latestVersion" == "$nuspecVersion" ]; then
-                echo "ERROR: new version (nuspec version) should be greater than latest version."
-                echo "You must update the version number in the nuspec file to continue."
-                exit 1
+              if [ -z "$result" ]; then
+                  echo "New nuspec version is valid."
+                  echo "##vso[task.setvariable variable=LatestPackageVersions.7_x_x;isOutput=true]$nuspecVersion"
               else
-                echo "Versions are different. Updating shared variable..."
-                echo "##vso[task.setvariable variable=LatestPackageVersions.7_x_x;isOutput=true]$nuspecVersion"
+                  echo $result;
+                  exit 1
               fi
 
 - task: NuGetToolInstaller@1
