@@ -30,7 +30,7 @@ steps:
               echo "Latest version = $latestVersion"
               echo "Nuspec version = $nuspecVersion"
 
-              result=$(pwsh -File "path/to/Check-Version.ps1" -latestVersion "$latestVersion" -nuspecVersion "$nuspecVersion")
+              result=$(pwsh -File "Check-Version.ps1" -latestVersion "$latestVersion" -nuspecVersion "$nuspecVersion")
 
               if [ -z "$result" ]; then
                   echo "New nuspec version is valid."
