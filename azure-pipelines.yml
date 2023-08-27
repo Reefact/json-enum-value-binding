@@ -34,7 +34,7 @@ steps:
 
               if [ -z "$result" ]; then
                   echo "New nuspec version is valid."
-                  echo "##vso[task.setvariable variable=LatestPackageVersions.7_x_x;isOutput=true]$nuspecVersion"
+                  az pipelines variable-group variable update --group-id "LatestPackageVersions" --name "7_x_x" --value $nuspecVersion
               else
                   echo $result;
                   exit 1
