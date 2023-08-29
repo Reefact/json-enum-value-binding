@@ -14,7 +14,7 @@
     <description>Allows explicit naming of enumeration values. Is to enumeration values what `JsonPropertyNameAttribute` is to properties names.</description>
     <summary>Strengthen the stability of your API contracts and take full control over the JSON serialization of your enums. Designed for developers who demand uncompromising contract security, this library simplifies the customization of enumeration JSON values, guaranteeing long-term compatibility with your customers.</summary>
     <readme>docs\readme.md</readme>
-    <releaseNotes></releaseNotes>
+    <releaseNotes>fix: Change the visibility of the JsonEnumValueConverterFactory class to allow the JsonEnumValueAttribute to be used in contexts other than ASP.Net</releaseNotes>
     <copyright>©2023 Reefact</copyright>
     <language>en-US</language>
     <tags>JSON Serialization Binding Enum Enumeration ASP.Net Contract</tags>
