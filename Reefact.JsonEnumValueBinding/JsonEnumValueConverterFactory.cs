@@ -8,7 +8,11 @@ using System.Text.Json.Serialization;
 
 namespace Reefact.JsonEnumValueBinding {
 
-    internal sealed class JsonEnumValueConverterFactory : JsonConverterFactory {
+    /// <summary>
+    ///     Supports custom conversion of all enumerations values flagged with the <see cref="JsonEnumValueAttribute" />
+    ///     attribute.
+    /// </summary>
+    public sealed class JsonEnumValueConverterFactory : JsonConverterFactory {
 
         /// <inheritdoc />
         public override bool CanConvert(Type typeToConvert) {

@@ -5,6 +5,7 @@
     <nullable>enable</nullable>
     <ApplicationIcon>icon.ico</ApplicationIcon>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <Version>7.0.1</Version>
   </PropertyGroup>
 
   <ItemGroup>
