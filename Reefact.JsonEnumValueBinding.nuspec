@@ -3,7 +3,7 @@
   <metadata>
     <id>Reefact.JsonEnumValueBinding</id>
     <title>Enum Value Binding for JSON</title>
-    <version>7.0.0</version>
+    <version>7.0.3</version>
     <authors>Sylvain AURAT</authors>
     <owners>Sylvain AURAT</owners>
     <license type="expression">Apache-2.0</license>
@@ -14,7 +14,7 @@
     <description>Allows explicit naming of enumeration values. Is to enumeration values what `JsonPropertyNameAttribute` is to properties names.</description>
     <summary>Strengthen the stability of your API contracts and take full control over the JSON serialization of your enums. Designed for developers who demand uncompromising contract security, this library simplifies the customization of enumeration JSON values, guaranteeing long-term compatibility with your customers.</summary>
     <readme>docs\readme.md</readme>
-    <releaseNotes></releaseNotes>
+    <releaseNotes>Add a possibility to configure an instance of a serializer the same way as ASP.Net serializer.</releaseNotes>
     <copyright>©2023 Reefact</copyright>
     <language>en-US</language>
     <tags>JSON Serialization Binding Enum Enumeration ASP.Net Contract</tags>
